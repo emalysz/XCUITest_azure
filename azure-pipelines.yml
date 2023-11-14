@@ -14,5 +14,7 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'connection'
 - script: |
-    curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/app" -F "file=@/xxx"
+    sessionInfo = $(curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" -X GET "https://api-cloud.browserstack.com/app-automate/espresso/v2/builds/1d51c7955ab46c04e958d8ae6bc67f0f567ce611/sessions/6415c563c43884553eb915e7ea94e91475c0190524084317")
+    echo "$sessionInfo"
+
   displayName: 'Upload app'
