@@ -15,5 +15,5 @@ steps:
     BrowserStackServiceEndPoint: 'connection'
 - script: |
     ls
-    # curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/app" -F "file=@/XCUITest-App.ipa"
+    # curl -u "xx" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/app" -F "file=@/XCUITest-App.ipa"
   displayName: 'Upload app'
