@@ -14,6 +14,7 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'connection'
 - script: |
-    echo $BROWSERSTACK_USERNAME
-    echo $BROWSERSTACK_ACCESS_KEY
+    curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" \
+-X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/app" \
+-F "file=@/XCUITest_azure/XCUITest-App.ipa"
   displayName: 'Upload app'
