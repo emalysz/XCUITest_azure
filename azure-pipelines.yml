@@ -14,7 +14,7 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'connection'
 - script: |
-    sessionInfo=$(curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" https://api.browserstack.com/automate/builds.json)
+    sessionInfo=$(curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" https://api.browserstack.com/automate/sessions/0e000cc1375fd32b51fccd8a7d4abcb5a75407f5.json | jq -r '.automation_session')
     echo "$sessionInfo";
 
   displayName: 'Upload app'
