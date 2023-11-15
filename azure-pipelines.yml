@@ -14,7 +14,7 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'connection'
 - script: |
-    sessionInfo=$(curl -u "'$BROWSERSTACK_USERNAME':'$BROWSERSTACK_ACCESS_KEY'" https://api.browserstack.com/automate/sessions/0e000cc1375fd32b51fccd8a7d4abcb5a75407f5.json | jq -r '.automation_session')
+    sessionInfo=$(curl -u $BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY https://api.browserstack.com/automate/sessions/0e000cc1375fd32b51fccd8a7d4abcb5a75407f5.json | jq -r '.automation_session')
     # appURL=$(curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/app" -F "file=@/path/to/app/file/application-debug.ipa" | jq -r '.app_url')
     # testURL=$(curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/test-suite" -F "file=@/path/to/test/file/app-debug-SampleXCUITest.zip" | jq -r '.test_suite_url')
     # curl -u "emmamalysz_4PgZUS:BRKYBgoRtwernJha1Pjk" -X POST "https://api-cloud.browserstack.com/app-automate/xcuitest/v2/build" -d {"app": "$appURL", "testSuite": "$testURL","project" : "SampleBuild" "devices": ["iPhone X-11", "iPhone XS-13"]} -H "Content-Type: application/json"
